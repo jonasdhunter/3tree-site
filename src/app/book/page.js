@@ -110,9 +110,10 @@ export default function Book() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2" htmlFor="message">
+                <label className="block text-sm font-medium mb-2" htmlFor="message">
                     What's on your mind? *
-                    <textarea
+                </label>
+                <textarea
                     id="message"
                     name="message"
                     required
@@ -121,8 +122,8 @@ export default function Book() {
                     onChange={handleChange}
                     placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
-                    />                </div>
-
+                />
+                </div>
                 <div className="text-center pt-4">
                   <button
                     type="submit"
