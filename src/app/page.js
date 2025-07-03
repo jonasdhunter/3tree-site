@@ -2,46 +2,44 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
       {/* Simple Nav */}
-      <nav className="px-6 py-6 border-b border-gray-900">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-xl font-semibold">3tree</Link>
-          <div className="flex gap-8 text-gray-400">
-            <Link href="/work" className="hover:text-white transition">Work</Link>
-            <Link href="/writing" className="hover:text-white transition">Writing</Link>
-            <Link href="/book" className="hover:text-white transition">Book a Call</Link>
+      <nav className="px-6 py-6 border-b border-[#ECF0F1]">
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center">
+          <Link href="/" className="text-2xl font-semibold">3tree</Link>
+          <div className="flex gap-8 text-[#95A5A6]">
+            <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
+            <Link href="/writing" className="hover:text-[#27AE60] transition">Writing</Link>
+            <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
           </div>
         </div>
       </nav>
 
-      <section className="px-6 py-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold mb-4">
+      <section className="px-6 py-20">
+        <div className="max-w-[1200px] mx-auto">
+          <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 max-w-[65ch]">
             Strategic Coaching & Innovation
           </h1>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-[#95A5A6] mb-8 max-w-[65ch] leading-relaxed">
             Helping leaders create meaningful change through strategic planning, 
             impact measurement, and transformative coaching.
           </p>
           
-          {/* Updated grid - now clickable */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-            <Link href="/work" className="border border-gray-800 p-6 rounded hover:border-gray-600 transition block">
-              <h3 className="text-xl font-semibold mb-2">Coaching & Consulting</h3>
-              <p className="text-gray-400">1-on-1 coaching, workshops, and strategic facilitation</p>
+            <Link href="/work" className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition block bg-white">
+              <h3 className="text-2xl font-medium mb-4">Coaching & Consulting</h3>
+              <p className="text-[#95A5A6] leading-relaxed">1-on-1 coaching, workshops, and strategic facilitation</p>
             </Link>
-            <Link href="/writing" className="border border-gray-800 p-6 rounded hover:border-gray-600 transition block">
-              <h3 className="text-xl font-semibold mb-2">Insights & Tools</h3>
-              <p className="text-gray-400">Frameworks, experiments, and lessons learned</p>
+            <Link href="/writing" className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition block bg-white">
+              <h3 className="text-2xl font-medium mb-4">Insights & Tools</h3>
+              <p className="text-[#95A5A6] leading-relaxed">Frameworks, experiments, and lessons learned</p>
             </Link>
           </div>
 
-          {/* Simple CTA */}
-          <div className="mt-16 text-center">
+          <div className="mt-20">
             <Link 
               href="/book" 
-              className="inline-block bg-white text-black px-8 py-3 rounded font-medium hover:bg-gray-200 transition"
+              className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
             >
               Start a Conversation
             </Link>
