@@ -1,59 +1,6 @@
-'use client'
-
 import Link from 'next/link'
-import { useState } from 'react'
 
-export default function Book() {
-  const [submitted, setSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          access_key: "bf971bd6-69e8-4077-82f2-a7233a10137a",
-          subject: "New Contact from 3Tree Website",
-          from_name: formData.name,
-          name: formData.name,
-          email: formData.email,
-          message: formData.message
-        })
-      })
-      
-      if (response.ok) {
-        setSubmitted(true)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else {
-        alert('Something went wrong. Please try again.')
-      }
-    } catch (error) {
-      console.error('Error:', error)
-      alert('Error submitting form. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
+export default function About() {
   return (
     <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
       {/* Simple Nav */}
@@ -63,97 +10,93 @@ export default function Book() {
             <span className="text-3xl font-black bg-gradient-to-r from-[#27AE60] to-[#2C3E50] bg-clip-text text-transparent">3</span>tree
           </Link>
           <div className="flex gap-8 text-[#95A5A6]">
-            <Link href="/about" className="hover:text-[#27AE60] transition">About</Link>
-            <Link href="/book" className="text-[#27AE60]">Book a Call</Link>
+            <Link href="/about" className="text-[#27AE60]">About</Link>
+            <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
           </div>
         </div>
       </nav>
 
       <section className="px-6 py-20">
-        <div className="max-w-[600px] mx-auto">
-          {!submitted ? (
-            <>
-              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let's Connect</h1>
-              <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                Share a bit about what you're working on and we'll find a time to explore how we might support you.
-              </p>
+        <div className="max-w-[800px] mx-auto">
+          <h1 className="text-[2.5rem] leading-tight font-semibold mb-12">How We Work</h1>
+          
+          {/* Opening */}
+          <div className="mb-16">
+            <p className="text-xl leading-relaxed mb-6">
+              At our core, we believe that lasting organizational transformation emerges not from mechanical processes, but from living systems that honor both consciousness and craft.
+            </p>
+            <p className="text-lg text-[#95A5A6] leading-relaxed mb-6">
+              We work with values-aligned organizations ready to move beyond quick fixes toward sustainable, 50-year thinking—helping teams discover their collective intelligence and create something beautiful that endures.
+            </p>
+            <p className="text-lg text-[#95A5A6] leading-relaxed">
+              Our approach integrates deep principles with practical results, supporting leaders who understand that the most profound changes happen when we slow down enough to listen, stay present with complexity, and allow solutions to emerge from authentic collaboration.
+            </p>
+          </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2" htmlFor="name">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2" htmlFor="email">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2" htmlFor="message">
-                    What's on your mind? *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
-                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
-                  />
-                </div>
-
-                <div className="text-center pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition disabled:opacity-50"
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
-                </div>
-              </form>
-            </>
-          ) : (
-            <>
-              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
-              <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                We appreciate you reaching out. Now let's find a time to connect.
-              </p>
-              
-              {/* Calendly embed */}
-              <div className="calendly-inline-widget" 
-                   data-url="https://calendly.com/jonasdhunter/30m" 
-                   style={{minWidth: '320px', height: '700px'}}>
+          {/* Principles */}
+          <div className="border-t border-[#ECF0F1] pt-16">
+            <h2 className="text-2xl font-semibold mb-12">Our Foundational Principles</h2>
+            
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-xl font-medium mb-3">Listening</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  True listening engages mind, emotions, feelings, and bodily sensations to perceive more clearly. When we listen with our whole being—present to thoughts, aware of emotions both heavy and light, attuned to the wisdom held in the body—we can see more deeply. This quality of attention generates real knowledge, conviction, and knowing.
+                </p>
               </div>
-              <script type="text/javascript" 
-                      src="https://assets.calendly.com/assets/external/widget.js" 
-                      async>
-              </script>
-            </>
-          )}
+
+              <div>
+                <h3 className="text-xl font-medium mb-3">Presence</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  Presence is a state of being that transcends typical vulnerability and authenticity. It is the awareness that recognizes when we are caught by mental chatter, emotional reactivity, or physical tension—and the active choice to rise above these patterns. Presence means grasping our agency: surrendering what does not serve while remaining completely open and receptive to what wants to emerge.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-3">Relationship</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  This principle goes beyond traditional collaboration. It is about maintaining your sovereignty while moving in harmony with others toward an emergent ideal. Rather than being driven by intellectual frameworks, this work is guided by a deeper intelligence that allows for authentic connection and collective wisdom to arise naturally.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-3">Foundational Understanding</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  The recognition that consciousness underlies all of material reality. This is not theoretical but must be personally experienced—the felt sense of something true, good, and beautiful that connects us to the source of creativity and wisdom. When teams touch this deeper foundation, their work becomes aligned with larger patterns of growth and sustainability.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-3">Agency & Simplicity</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  The wisdom of not doing more than what is needed, not acting until we are ready. This principle guides us toward elegant solutions and right timing, honoring natural rhythms rather than forcing outcomes through sheer effort.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Working Together */}
+          <div className="mt-20 pt-16 border-t border-[#ECF0F1]">
+            <h2 className="text-2xl font-semibold mb-8">Working Together</h2>
+            <p className="text-lg text-[#95A5A6] leading-relaxed mb-6">
+              We work with a small number of organizations—typically 10 or fewer—allowing for the depth of relationship and attention that real transformation requires. Our rhythm honors both focused sprint work and reflective integration time.
+            </p>
+            <p className="text-lg text-[#95A5A6] leading-relaxed mb-12">
+              We are drawn to leaders and organizations who want to do things right rather than fast, who understand that the most sustainable growth happens organically, and who are willing to invest in foundational work that creates lasting value.
+            </p>
+            
+            <div className="text-center">
+              <p className="text-lg text-[#95A5A6] mb-6">
+                If you are sensing there is a deeper way to operate, if you want your work to be aligned with your values, and if you are ready to build something that can flourish for generations—
+              </p>
+              <Link 
+                href="/book" 
+                className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
+              >
+                Let's Have a Conversation
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
