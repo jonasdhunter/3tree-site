@@ -4,16 +4,10 @@ export default function About() {
   return (
     <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
       {/* Simple Nav */}
-      <nav className="px-6 py-6 border-b border-[#ECF0F1]">
-        <div className="max-w-[1200px] mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl font-semibold">3Tree</Link>
-          <div className="flex gap-8 text-[#95A5A6]">
-            <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
-            <Link href="/writing" className="hover:text-[#27AE60] transition">Writing</Link>
-            <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
-          </div>
+        <div className="flex gap-8 text-[#95A5A6]">
+        <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
+        <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
         </div>
-      </nav>
 
       <section className="px-6 py-20">
         <div className="max-w-[800px] mx-auto">
