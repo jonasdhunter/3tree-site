@@ -1,6 +1,9 @@
+// ============================================
+// app/work/page.js - Combined Work & About Page
+// ============================================
 import Link from 'next/link'
 
-export default function Home() {
+export default function Work() {
   return (
     <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
       {/* Simple Nav */}
@@ -10,7 +13,7 @@ export default function Home() {
             <span className="text-3xl font-black bg-gradient-to-r from-[#27AE60] to-[#2C3E50] bg-clip-text text-transparent">3</span>tree
           </Link>
           <div className="flex gap-8 text-[#95A5A6]">
-            <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
+            <Link href="/work" className="text-[#27AE60]">Work</Link>
             <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
           </div>
         </div>
@@ -18,17 +21,22 @@ export default function Home() {
 
       <section className="px-6 py-20">
         <div className="max-w-[1200px] mx-auto">
-          <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 max-w-[65ch]">
-            Strategic Coaching & Innovation
-          </h1>
-          <p className="text-xl text-[#95A5A6] mb-8 max-w-[65ch] leading-relaxed">
-            Helping leaders create meaningful change through strategic planning, 
-            impact measurement, and transformative coaching.
-          </p>
+          <h1 className="text-[2.5rem] leading-tight font-semibold mb-12">Work</h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          {/* Brief intro */}
+          <div className="max-w-[800px] mb-16">
+            <p className="text-xl leading-relaxed mb-6">
+              I'm Jonas Hunter, a strategic coach and facilitator helping leaders and organizations create meaningful change.
+            </p>
+            <p className="text-lg text-[#95A5A6] leading-relaxed">
+              With experience across nonprofit, corporate, and startup environments, I bring a systems perspective to organizational challenges, focusing on aligning strategy with values and measuring what matters.
+            </p>
+          </div>
+
+          {/* Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             {/* 1-on-1 Coaching */}
-            <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
+            <div className="border border-[#ECF0F1] p-8 rounded-lg bg-white">
               <h3 className="text-2xl font-medium mb-4">1-on-1 Coaching</h3>
               <p className="text-[#95A5A6] leading-relaxed mb-6">
                 Personal transformation for leaders ready to create meaningful impact.
@@ -50,7 +58,7 @@ export default function Home() {
             </div>
 
             {/* Consulting & Facilitation */}
-            <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
+            <div className="border border-[#ECF0F1] p-8 rounded-lg bg-white">
               <h3 className="text-2xl font-medium mb-4">Consulting & Strategic Facilitation</h3>
               <p className="text-[#95A5A6] leading-relaxed mb-6">
                 Organizational transformation through collaborative strategy and measurement.
@@ -72,7 +80,46 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Principles */}
+          <div className="border-t border-[#ECF0F1] pt-16 max-w-[800px]">
+            <h2 className="text-2xl font-semibold mb-8">Guiding Principles</h2>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-medium mb-2">Clarity Through Simplicity</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  Complex challenges don't require complicated solutions. The best strategies are clear, actionable, and aligned with core values.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-2">Measure What Matters</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  Impact isn't just about numbers. True measurement captures both quantitative outcomes and qualitative change.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-2">Systems Over Symptoms</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  Lasting change comes from understanding and addressing root causes, not just managing surface-level issues.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium mb-2">Progress Over Perfection</h3>
+                <p className="text-[#95A5A6] leading-relaxed">
+                  Small, consistent steps toward a clear vision create more sustainable change than dramatic overhauls.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
           <div className="mt-20 text-center">
+            <p className="text-lg text-[#95A5A6] mb-6">
+              Ready to create meaningful change?
+            </p>
             <Link 
               href="/book" 
               className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
