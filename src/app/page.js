@@ -6,7 +6,10 @@ export default function Home() {
       {/* Simple Nav */}
       <nav className="px-6 py-6 border-b border-[#ECF0F1]">
         <div className="max-w-[1200px] mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl font-semibold">3tree</Link>
+          <Link href="/" className="text-2xl font-semibold">
+          <span className="text-[#27AE60]">3</span>tree
+          </Link>
+      
           <div className="flex gap-8 text-[#95A5A6]">
             <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
             <Link href="/writing" className="hover:text-[#27AE60] transition">Writing</Link>
