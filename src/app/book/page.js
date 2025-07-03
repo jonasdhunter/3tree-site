@@ -7,15 +7,9 @@ export default function Book() {
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
-    connectionType: '',
-    whyNow: '',
-    vision: '',
-    strengthsGaps: '',
-    currentStage: '',
-    timeline: '',
     name: '',
     email: '',
-    organization: ''
+    message: ''
   })
 
   const handleSubmit = async (e) => {
@@ -30,17 +24,11 @@ export default function Book() {
         },
         body: JSON.stringify({
           access_key: "bf971bd6-69e8-4077-82f2-a7233a10137a",
-          subject: "New 3Tree Intake Form Submission",
+          subject: "New Contact from 3Tree Website",
           from_name: formData.name,
           name: formData.name,
           email: formData.email,
-          organization: formData.organization,
-          connection_type: formData.connectionType,
-          why_reaching_out: formData.whyNow,
-          vision: formData.vision,
-          strengths_and_gaps: formData.strengthsGaps,
-          current_stage: formData.currentStage,
-          timeline: formData.timeline
+          message: formData.message
         })
       })
       
@@ -68,7 +56,7 @@ export default function Book() {
 
   return (
     <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
-      {/* Nav - updated to remove Work link */}
+      {/* Simple Nav */}
       <nav className="px-6 py-6 border-b border-[#ECF0F1]">
         <div className="max-w-[1200px] mx-auto flex justify-between items-center">
           <Link href="/" className="text-2xl font-semibold">
@@ -82,24 +70,83 @@ export default function Book() {
       </nav>
 
       <section className="px-6 py-20">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[600px] mx-auto">
           {!submitted ? (
             <>
-              {/* FORM SECTION - All the form fields from the artifact */}
-              {/* Copy all the form JSX from the book-page-intake artifact here */}
-              {/* It's too long to paste in this response, but use the complete form from the artifact */}
+              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let's Connect</h1>
+              <p className="text-xl text-[#95A5A6] mb-12 text-center">
+                Share a bit about what you're working on and we'll find a time to explore how we might support you.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2" htmlFor="name">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-2" htmlFor="email">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2" htmlFor="message">
+                    What's on your mind? *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
+                    className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
+                  />
+                </div>
+
+                <div className="text-center pt-4">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </button>
+                </div>
+              </form>
             </>
           ) : (
             <>
-              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4">Thank You</h1>
-              <p className="text-xl text-[#95A5A6] mb-12">
-                Your responses help me prepare for our conversation. Please select a time that works for you below.
+              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
+              <p className="text-xl text-[#95A5A6] mb-12 text-center">
+                We appreciate you reaching out. Now let's find a time to connect.
               </p>
               
-              {/* Add your Calendly embed here */}
+              {/* Calendly embed */}
               <div className="calendly-inline-widget" 
-                   data-url="https://calendly.com/YOUR_CALENDLY_LINK" 
-                   style={{minWidth: '320px', height: '630px'}}>
+                   data-url="https://calendly.com/jonasdhunter/30m" 
+                   style={{minWidth: '320px', height: '700px'}}>
               </div>
               <script type="text/javascript" 
                       src="https://assets.calendly.com/assets/external/widget.js" 

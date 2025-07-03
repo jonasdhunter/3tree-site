@@ -11,7 +11,6 @@ export default function About() {
           </Link>
           <div className="flex gap-8 text-[#95A5A6]">
             <Link href="/about" className="text-[#27AE60]">About</Link>
-            <Link href="/work" className="hover:text-[#27AE60] transition">Work</Link>
             <Link href="/book" className="hover:text-[#27AE60] transition">Book a Call</Link>
           </div>
         </div>
@@ -49,28 +48,28 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-medium mb-3">Presence</h3>
                 <p className="text-[#95A5A6] leading-relaxed">
-                  Presence is a state of being that transcends typical vulnerability and authenticity. It's the awareness that recognizes when we're caught by mental chatter, emotional reactivity, or physical tension—and the active choice to rise above these patterns. Presence means grasping our agency: surrendering what doesn't serve while remaining completely open and receptive to what wants to emerge.
+                  Presence is a state of being that transcends typical vulnerability and authenticity. It is the awareness that recognizes when we are caught by mental chatter, emotional reactivity, or physical tension—and the active choice to rise above these patterns. Presence means grasping our agency: surrendering what does not serve while remaining completely open and receptive to what wants to emerge.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-medium mb-3">Relationship</h3>
                 <p className="text-[#95A5A6] leading-relaxed">
-                  This principle goes beyond traditional collaboration. It's about maintaining your sovereignty while moving in harmony with others toward an emergent ideal. Rather than being driven by intellectual frameworks, this work is guided by a deeper intelligence that allows for authentic connection and collective wisdom to arise naturally.
+                  This principle goes beyond traditional collaboration. It is about maintaining your sovereignty while moving in harmony with others toward an emergent ideal. Rather than being driven by intellectual frameworks, this work is guided by a deeper intelligence that allows for authentic connection and collective wisdom to arise naturally.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-medium mb-3">Foundational Understanding</h3>
                 <p className="text-[#95A5A6] leading-relaxed">
-                  The recognition that consciousness underlies all of material reality. This isn't theoretical but must be personally experienced—the felt sense of something true, good, and beautiful that connects us to the source of creativity and wisdom. When teams touch this deeper foundation, their work becomes aligned with larger patterns of growth and sustainability.
+                  The recognition that consciousness underlies all of material reality. This is not theoretical but must be personally experienced—the felt sense of something true, good, and beautiful that connects us to the source of creativity and wisdom. When teams touch this deeper foundation, their work becomes aligned with larger patterns of growth and sustainability.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-medium mb-3">Agency & Simplicity</h3>
                 <p className="text-[#95A5A6] leading-relaxed">
-                  The wisdom of not doing more than what's needed, not acting until we're ready. This principle guides us toward elegant solutions and right timing, honoring natural rhythms rather than forcing outcomes through sheer effort.
+                  The wisdom of not doing more than what is needed, not acting until we are ready. This principle guides us toward elegant solutions and right timing, honoring natural rhythms rather than forcing outcomes through sheer effort.
                 </p>
               </div>
             </div>
@@ -83,18 +82,18 @@ export default function About() {
               We work with a small number of organizations—typically 10 or fewer—allowing for the depth of relationship and attention that real transformation requires. Our rhythm honors both focused sprint work and reflective integration time.
             </p>
             <p className="text-lg text-[#95A5A6] leading-relaxed mb-12">
-              We're drawn to leaders and organizations who want to do things right rather than fast, who understand that the most sustainable growth happens organically, and who are willing to invest in foundational work that creates lasting value.
+              We are drawn to leaders and organizations who want to do things right rather than fast, who understand that the most sustainable growth happens organically, and who are willing to invest in foundational work that creates lasting value.
             </p>
             
             <div className="text-center">
               <p className="text-lg text-[#95A5A6] mb-6">
-                If you're sensing there's a deeper way to operate, if you want your work to be aligned with your values, and if you're ready to build something that can flourish for generations—
+                If you are sensing there is a deeper way to operate, if you want your work to be aligned with your values, and if you are ready to build something that can flourish for generations—
               </p>
               <Link 
                 href="/book" 
                 className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
               >
-                Let's Have a Conversation.
+                Let's Have a Conversation
               </Link>
             </div>
           </div>
