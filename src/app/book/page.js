@@ -75,7 +75,7 @@ export default function Book() {
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let's Connect</h1>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                Share a bit about what you&apos;re working on and we&apos;ll find a time to explore how we might support you.
+                Share a bit about what you're working on and we'll find a time to explore how we might support you.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -110,10 +110,10 @@ export default function Book() {
                 </div>
 
                 <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="message">
+                  <label className="block text-sm font-medium mb-2" htmlFor="message">
                     What's on your mind? *
-                </label>
-                <textarea
+                  </label>
+                  <textarea
                     id="message"
                     name="message"
                     required
@@ -122,8 +122,9 @@ export default function Book() {
                     onChange={handleChange}
                     placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
-                />
+                  />
                 </div>
+
                 <div className="text-center pt-4">
                   <button
                     type="submit"
