@@ -94,7 +94,7 @@ export default function About() {
                 href="/book" 
                 className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
               >
-                Let's Have a Conversation 
+                Let's Have a Conversation.
               </Link>
             </div>
           </div>
