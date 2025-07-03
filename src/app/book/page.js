@@ -75,7 +75,7 @@ export default function Book() {
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let's Connect</h1>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                Share a bit about what you're working on and we'll find a time to explore how we might support you.
+                Share a bit about what you&apos;re working on and we&apos;ll find a time to explore how we might support you.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
