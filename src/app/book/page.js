@@ -56,7 +56,6 @@ export default function Book() {
 
   return (
     <main className="min-h-screen bg-[#FEFEFE] text-[#2C3E50]">
-      {/* Simple Nav */}
       <nav className="px-6 py-6 border-b border-[#ECF0F1]">
         <div className="max-w-[1200px] mx-auto flex justify-between items-center">
           <Link href="/" className="text-2xl font-semibold">
@@ -111,7 +110,7 @@ export default function Book() {
 
                 <div>
                   <label className="block text-sm font-medium mb-2" htmlFor="message">
-                    What's on your mind? *
+                    What&apos;s on your mind? *
                   </label>
                   <textarea
                     id="message"
@@ -120,7 +119,7 @@ export default function Book() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
+                    placeholder="Tell us about your organization, what you&apos;re working on, and what kind of support you&apos;re looking for..."
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
                   />
                 </div>
@@ -140,10 +139,9 @@ export default function Book() {
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                We appreciate you reaching out. Now let's find a time to connect.
+                Let&apos;s find a time to connect.
               </p>
               
-              {/* Calendly embed */}
               <div className="calendly-inline-widget" 
                    data-url="https://calendly.com/jonasdhunter/30m" 
                    style={{minWidth: '320px', height: '700px'}}>
