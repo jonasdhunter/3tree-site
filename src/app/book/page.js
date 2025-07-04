@@ -35,6 +35,32 @@ export default function Book() {
       if (response.ok) {
         setSubmitted(true)
         window.scrollTo({ top: 0, behavior: 'smooth' })
+
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: "bf971bd6-69e8-4077-82f2-a7233a10137a",
+            subject: "Thank you for contacting 3Tree",
+            to: formData.email,
+            from_name: "3Tree",
+            message: `Dear ${formData.name},
+
+Thank you for reaching out to 3Tree. We've received your message:
+
+"${formData.message}"
+
+To schedule a conversation, please visit our booking link:
+https://calendly.com/jonasdhunter/30m
+
+We look forward to connecting with you soon.
+
+Best regards,
+The 3Tree Team`
+          })
+        })
       } else {
         alert('Something went wrong. Please try again.')
       }
@@ -63,6 +89,8 @@ export default function Book() {
           </Link>
           <div className="flex gap-8 text-[#95A5A6]">
             <Link href="/about" className="hover:text-[#27AE60] transition">About</Link>
+
+            <Link href="/gallery" className="hover:text-[#27AE60] transition">Gallery</Link>
             <Link href="/book" className="text-[#27AE60]">Book a Call</Link>
           </div>
         </div> 
@@ -119,7 +147,7 @@ export default function Book() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your organization, what you&apos;re working on, and what kind of support you&apos;re looking for..."
+                    placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
                   />
                 </div>
@@ -138,18 +166,22 @@ export default function Book() {
           ) : (
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
-              <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                Let&apos;s find a time to connect.
+              <p className="text-xl text-[#95A5A6] mb-6 text-center">
+                We&apos;ve received your message and sent you an email with next steps.
               </p>
-              
-              <div className="calendly-inline-widget" 
-                   data-url="https://calendly.com/jonasdhunter/30m" 
-                   style={{minWidth: '320px', height: '700px'}}>
+              <p className="text-xl text-[#95A5A6] mb-12 text-center">
+                Ready to schedule? Click the button below to find a time that works for you.
+              </p>
+              <div className="text-center">
+                <a
+                  href="https://calendly.com/jonasdhunter/30m"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#27AE60] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#229954] transition"
+                >
+                  Schedule a Call
+                </a>
               </div>
-              <script type="text/javascript" 
-                      src="https://assets.calendly.com/assets/external/widget.js" 
-                      async>
-              </script>
             </>
           )}
         </div>
