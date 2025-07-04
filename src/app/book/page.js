@@ -66,7 +66,7 @@ export default function Book() {
             <Link href="/about" className="hover:text-[#27AE60] transition">About</Link>
             <Link href="/book" className="text-[#27AE60]">Book a Call</Link>
           </div>
-        </div>
+        </div> 
       </nav>
 
       <section className="px-6 py-20">
