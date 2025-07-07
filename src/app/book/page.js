@@ -100,9 +100,11 @@ The 3Tree Team`
         <div className="max-w-[600px] mx-auto">
           {!submitted ? (
             <>
-              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let&apos;s Connect</h1>
+
+              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let&apos;s Discuss Your Practice</h1>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
-                Share a bit about what you&apos;re working on and we&apos;ll find a time to explore how we might support you.
+
+                Share your consulting focus and challenges, and let&apos;s explore how we can provide the strategic backbone that enables your best work.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -138,7 +140,8 @@ The 3Tree Team`
 
                 <div>
                   <label className="block text-sm font-medium mb-2" htmlFor="message">
-                    What&apos;s on your mind? *
+
+                    Tell us about your practice *
                   </label>
                   <textarea
                     id="message"
@@ -147,7 +150,8 @@ The 3Tree Team`
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your organization, what you're working on, and what kind of support you're looking for..."
+
+                    placeholder="What type of transformation work do you do? What support would be most valuable for your practice?"
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
                   />
                 </div>
@@ -167,7 +171,8 @@ The 3Tree Team`
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
               <p className="text-xl text-[#95A5A6] mb-6 text-center">
-                We&apos;ve received your message and sent you an email with next steps.
+
+                We&apos;ve received your message and look forward to discussing how we can support your transformation practice.
               </p>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
                 Ready to schedule? Click the button below to find a time that works for you.
