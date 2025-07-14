@@ -89,7 +89,6 @@ The 3Tree Team`
           </Link>
           <div className="flex gap-8 text-[#95A5A6]">
             <Link href="/about" className="hover:text-[#27AE60] transition">About</Link>
-
             <Link href="/gallery" className="hover:text-[#27AE60] transition">Gallery</Link>
             <Link href="/book" className="text-[#27AE60]">Book a Call</Link>
           </div>
@@ -100,11 +99,9 @@ The 3Tree Team`
         <div className="max-w-[600px] mx-auto">
           {!submitted ? (
             <>
-
-              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let&apos;s Discuss Your Practice</h1>
+              <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Let&apos;s Connect</h1>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
-
-                Share your consulting focus and challenges, and let&apos;s explore how we can provide the strategic backbone that enables your best work.
+                Share your needs and let&apos;s explore how we can support your organization&apos;s transformation journey.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -140,8 +137,7 @@ The 3Tree Team`
 
                 <div>
                   <label className="block text-sm font-medium mb-2" htmlFor="message">
-
-                    Tell us about your practice *
+                    Tell us about your needs *
                   </label>
                   <textarea
                     id="message"
@@ -150,8 +146,7 @@ The 3Tree Team`
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-
-                    placeholder="What type of transformation work do you do? What support would be most valuable for your practice?"
+                    placeholder="What challenges are you facing? Are you interested in Strategic Support, Strategic Impact Design, or Organizational Development services?"
                     className="w-full px-4 py-3 border border-[#ECF0F1] rounded-lg focus:outline-none focus:border-[#27AE60] transition resize-none"
                   />
                 </div>
@@ -171,8 +166,7 @@ The 3Tree Team`
             <>
               <h1 className="text-[2.5rem] leading-tight font-semibold mb-4 text-center">Thank You</h1>
               <p className="text-xl text-[#95A5A6] mb-6 text-center">
-
-                We&apos;ve received your message and look forward to discussing how we can support your transformation practice.
+                We&apos;ve received your message and look forward to discussing how we can support your transformation goals.
               </p>
               <p className="text-xl text-[#95A5A6] mb-12 text-center">
                 Ready to schedule? Click the button below to find a time that works for you.

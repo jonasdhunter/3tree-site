@@ -26,12 +26,11 @@ export default function Home() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {/* Foundation Tier */}
+            {/* Strategic Support */}
             <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
-              <h3 className="text-2xl font-medium mb-4">Foundation</h3>
-              <p className="text-[#27AE60] font-medium mb-6">5 hours/month</p>
+              <h3 className="text-2xl font-medium mb-4">Strategic Support</h3>
               <p className="text-[#95A5A6] leading-relaxed mb-6">
-                Essential structure for consultants seeking core support.
+                Complete strategic support for transformation consultants.
               </p>
               <ul className="space-y-3 text-[#95A5A6]">
                 <li className="flex items-start">
@@ -40,30 +39,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Basic Implementation Support</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Document Review</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Comprehensive Tier */}
-            <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
-              <h3 className="text-2xl font-medium mb-4">Comprehensive</h3>
-              <p className="text-[#27AE60] font-medium mb-6">10 hours/month</p>
-              <p className="text-[#95A5A6] leading-relaxed mb-6">
-                Full partnership for established consultants.
-              </p>
-              <ul className="space-y-3 text-[#95A5A6]">
-                <li className="flex items-start">
-                  <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Enhanced Strategic Support</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Full Implementation Support</span>
+                  <span>Implementation Support</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
@@ -73,36 +49,61 @@ export default function Home() {
                   <span className="text-[#27AE60] mr-2">•</span>
                   <span>Progress Tracking</span>
                 </li>
+                <li className="flex items-start">
+                  <span className="text-[#27AE60] mr-2">•</span>
+                  <span>Practice Management</span>
+                </li>
               </ul>
             </div>
 
-            {/* Intensive Tier */}
+            {/* Strategic Impact Design */}
             <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
-              <h3 className="text-2xl font-medium mb-4">Intensive</h3>
-              <p className="text-[#27AE60] font-medium mb-6">20 hours/month</p>
+              <h3 className="text-2xl font-medium mb-4">Strategic Impact Design</h3>
               <p className="text-[#95A5A6] leading-relaxed mb-6">
-                Comprehensive support for complex engagements.
+                Build strategy and impact measurement as one integrated system.
               </p>
               <ul className="space-y-3 text-[#95A5A6]">
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Dedicated Strategic Partnership</span>
+                  <span>Mission, Vision, Values + Theory of Change</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Full Implementation Support</span>
+                  <span>Integrated OKRs</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Document Excellence</span>
+                  <span>Measurement Systems</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Comprehensive Progress Tracking</span>
+                  <span>Board Alignment</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#27AE60] mr-2">•</span>
-                  <span>Practice Management Support</span>
+                  <span>Unified Reporting</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Organizational Development */}
+            <div className="border border-[#ECF0F1] p-8 rounded-lg hover:border-[#27AE60] transition bg-white">
+              <h3 className="text-2xl font-medium mb-4">Organizational Development</h3>
+              <p className="text-[#95A5A6] leading-relaxed mb-6">
+                Build systems that drive growth and effectiveness.
+              </p>
+              <ul className="space-y-3 text-[#95A5A6]">
+                <li className="flex items-start">
+                  <span className="text-[#27AE60] mr-2">•</span>
+                  <span>Gap Analysis</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#27AE60] mr-2">•</span>
+                  <span>Culture of Performance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#27AE60] mr-2">•</span>
+                  <span>Team Structure Optimization</span>
                 </li>
               </ul>
             </div>
