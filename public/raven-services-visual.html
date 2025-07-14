@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Consulting for Raven Portfolio Companies</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #FEFEFE;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .header {
+            border-bottom: 3px solid #27AE60;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #2C3E50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #27AE60;
+            margin-bottom: 12px;
+        }
+        
+        .intro {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #2C3E50;
+        }
+        
+        .value-prop {
+            background: #ECF0F1;
+            padding: 24px;
+            border-left: 4px solid #27AE60;
+            margin: 40px 0;
+            font-style: italic;
+        }
+        
+        .service-card {
+            background: #FEFEFE;
+            border: 1px solid #ECF0F1;
+            padding: 32px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .service-card h3 {
+            color: #2C3E50;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+        
+        .service-card li {
+            padding-left: 24px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #27AE60;
+            font-weight: bold;
+        }
+        
+        .timeline {
+            color: #95A5A6;
+            font-size: 14px;
+            margin-top: 16px;
+            font-style: italic;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .process-number {
+            background: #27AE60;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .process-content strong {
+            color: #2C3E50;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .how-section {
+            background: #FEFEFE;
+            border: 1px solid #ECF0F1;
+            padding: 32px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        
+        .how-item {
+            margin-bottom: 24px;
+        }
+        
+        .how-item h4 {
+            color: #27AE60;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .investment-box {
+            background: #2C3E50;
+            color: white;
+            padding: 32px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .investment-box h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .investment-box p {
+            font-size: 18px;
+            margin: 0;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #ECF0F1;
+        }
+        
+        .contact h3 {
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: #27AE60;
+            text-decoration: none;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #27AE60;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+        
+        @media print {
+            .container {
+                padding: 40px;
+            }
+            
+            .service-card {
+                break-inside: avoid;
+            }
+            
+            .how-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Strategic Consulting for<br>Raven Indigenous Capital Partners<br>Portfolio Companies</h1>
+        </div>
+        
+        <section class="intro">
+            <h2>About This Partnership</h2>
+            <p>With 20 years leading organizational transformations and five years developing Raven's Indigenous Impact Measurement framework, I bring deep expertise in leadership development and impact measurement for social purpose organizations. I help portfolio companies build the systems and capabilities to scale sustainably while delivering both financial returns and community impact.</p>
+        </section>
+        
+        <section>
+            <h2>Core Services</h2>
+            
+            <div class="service-card">
+                <h3>1. Strategic Foundation</h3>
+                <p>Facilitate clarity and alignment on your organization's core identity and direction.</p>
+                <ul>
+                    <li><strong>Mission, Vision, Values:</strong> Guide your team to articulate shared purpose and aspirations</li>
+                    <li><strong>Strategic Priorities:</strong> Identify key focus areas that advance your mission</li>
+                    <li><strong>OKRs Development:</strong> Translate priorities into measurable objectives and key results</li>
+                    <li><strong>Leadership Alignment:</strong> Ensure board and management share understanding and commitment</li>
+                </ul>
+                <p class="timeline"><em>Often combined with Impact Measurement for integrated strategy and accountability.</em></p>
+            </div>
+            
+            <div class="service-card">
+                <h3>2. Impact Measurement & Management</h3>
+                <p>Design and implement systems to track and communicate your meaningful outcomes.</p>
+                <ul>
+                    <li><strong>Theory of Change:</strong> Map pathways from activities to community outcomes</li>
+                    <li><strong>Impact Framework:</strong> Develop metrics aligned with Raven's Indigenous Impact approach</li>
+                    <li><strong>Measurement Systems:</strong> Implement tracking using Airtable, Typeform, and automation tools</li>
+                    <li><strong>Impact Reporting:</strong> Create compelling narratives supported by data</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>3. Organizational Effectiveness</h3>
+                <ul>
+                    <li><strong>Gap Analysis:</strong> Identify operational barriers to growth and effectiveness</li>
+                    <li><strong>Culture of Performance:</strong> Build systems that support both accountability and relationships</li>
+                    <li><strong>Team Structure Optimization:</strong> Ensure the right people are in the right roles</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Engagement Process</h2>
+            
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <div class="process-content">
+                    <strong>Initial Consultation</strong>
+                    <p>Schedule a 30-minute discovery call to discuss your current challenges and explore how we might work together. A brief intake form helps maximize our time together.</p>
+                    <a href="[Schedule Discovery Call]" class="cta-button">Schedule Discovery Call</a>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <div class="process-content">
+                    <strong>Customized Proposal</strong>
+                    <p>Receive a proposal outlining scope, deliverables, and investment required.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <div class="process-content">
+                    <strong>Begin Engagement</strong>
+                    <p>Once aligned, we'll start with a kickoff session to ensure everyone is clear on objectives and approach.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <strong>Jonas Hunter</strong><br>
+                Strategic Consultant<br>
+                <a href="mailto:jonasdhunter@gmail.com">jonasdhunter@gmail.com</a><br>
+                778-700-5973<br>
+                <a href="https://linkedin.com/in/jonasdavidhunter">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
